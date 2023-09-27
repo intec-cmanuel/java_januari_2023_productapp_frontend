@@ -1,0 +1,8 @@
+nav > ul {
+  display: flex; /* Horizontally align items*/
+  list-style: none; /* Remove dots from the list*/
+  justify-content: space-around; /* Dynamically space items*/
+  border-bottom: 2px solid red; /* Border at the bottom, solid cyan 2px wide*/
+  background: black; /* background color */
+  color: cyan; /* Font color */
+}
