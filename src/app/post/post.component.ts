@@ -1,5 +1,5 @@
 import {Component, Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Component({
   selector: 'app-post',
@@ -21,7 +21,14 @@ export class PostComponent {
 
   sendPostRequest() {
     const product = {name: this.name, price: this.price}
-    this.http.post(this.url, product).subscribe();
+
+    const token = localStorage.getItem("token")
+
+    const headers: HttpHeaders = new HttpHeaders({
+      Authorization: `Bearer ${token}`
+    })
+
+    this.http.post(this.url, product, {headers}).subscribe();
 
   }
 }

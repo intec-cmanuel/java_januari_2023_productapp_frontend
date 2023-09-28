@@ -1,1 +1,12 @@
-<p>get works!</p>
+<div>
+
+  <button (click)="getAllProducts()">Get Products</button>
+  <div>
+    <ul>
+      <li *ngFor="let product of products">
+        <p>ID: {{product.id}} | NAME: {{product.name}} | PRICE: {{product.price}} </p>
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -5,4 +5,6 @@ nav > ul {
   border-bottom: 2px solid red; /* Border at the bottom, solid cyan 2px wide*/
   background: black; /* background color */
   color: cyan; /* Font color */
+  margin: 0;
 }
+
